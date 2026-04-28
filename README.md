@@ -11,7 +11,7 @@ This project focuses on applying **Object-Oriented Programming (OOP)** concepts,
 - Update existing items
 - Delete items
 - Display full menu
-- Persistent storage using files (if implemented)
+- Persistent storage using files 
 - Clean OOP architecture using C++
 
 ---
@@ -26,7 +26,7 @@ main.cpp ( will be found in src)
 - C++
 - Object-Oriented Programming (OOP)
 - File Handling
-- STL (if used)
+- STL 
 
 ---
 
