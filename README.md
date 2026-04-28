@@ -21,19 +21,18 @@ This project focuses on applying **Object-Oriented Programming (OOP)** concepts,
 include → Header files (.h)
 main.cpp ( will be found in src) 
 ---
-
 ## ⚙️ Technologies Used
 
 - C++
 - Object-Oriented Programming (OOP)
 - File Handling
-- STL 
+- STL (if used)
 
 ---
 
 ## 🛠️ How to Build & Run
 
 ### 🔹 Using g++
-bash
+```bash
 g++ main.cpp src/*.cpp -Iinclude -o app
 ./app
