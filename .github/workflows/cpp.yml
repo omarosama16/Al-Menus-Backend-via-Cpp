@@ -1,0 +1,24 @@
+name: C++ CI Pipeline
+
+on:
+  push:
+    branches: [ "*" ]
+  pull_request:
+    branches: [ "*" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install compiler
+      run: sudo apt-get update && sudo apt-get install -y g++
+
+    - name: Build main project
+      run: g++ src/*.cpp -Iinclude -o app
+
+    - name: Run main project
+      run: ./app
