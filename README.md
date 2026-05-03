@@ -1,11 +1,11 @@
-#  Al-Menus Backend (C++)
+# Al-Menus Backend (C++)
 
 A lightweight backend system built in **C++** for managing restaurant menus.  
 This project focuses on applying **Object-Oriented Programming (OOP)** concepts, file handling, and modular backend design.
 
 ---
 
-##  Features
+## Features
 
 - Add new menu items
 - Update existing items
@@ -21,7 +21,7 @@ This project focuses on applying **Object-Oriented Programming (OOP)** concepts,
 include → Header files (.h)
 main.cpp ( will be found in src) 
 ---
-## ⚙️ Technologies Used
+## Technologies Used
 
 - C++
 - Object-Oriented Programming (OOP)
@@ -30,9 +30,13 @@ main.cpp ( will be found in src)
 
 ---
 
-## 🛠️ How to Build & Run
+## How to Build & Run
 
 ### 🔹 Using g++
 ```bash
 g++ main.cpp src/*.cpp -Iinclude -o app
 ./app
+
+```
+------------ 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=omarosama16_Al-Menus-Backend-via-Cpp&metric=alert_status)](https://sonarcloud.io/dashboard?id=omarosama16_Al-Menus-Backend-via-Cpp)
