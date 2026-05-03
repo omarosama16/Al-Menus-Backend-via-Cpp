@@ -1,0 +1,44 @@
+name: C++ CI Pipeline + SonarCloud
+
+on:
+  push:
+    branches: ["*"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install compiler
+      run: sudo apt-get update && sudo apt-get install -y g++
+
+
+    - name: Build project
+      run: |
+        if [ -d "src" ]; then
+          g++ src/*.cpp -Iinclude -o app
+        else
+          g++ *.cpp -o app
+        fi
+
+    - name: Run app (auto input)
+      run: |
+        if [ -f "./app" ]; then
+          echo "0" | timeout 5s ./app || true
+        fi
+
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@v2
+      continue-on-error: true
+      with:
+        args: >
+          -Dsonar.projectKey=omarosama16_Al-Menus-Backend-via-Cpp
+          -Dsonar.organization=omarosama16
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
